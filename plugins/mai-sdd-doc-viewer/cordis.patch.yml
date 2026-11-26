@@ -1,0 +1,3 @@
+- insert:
+    - id: mai-sdd-doc-viewer
+      name: '@local/mai-sdd-doc-viewer'

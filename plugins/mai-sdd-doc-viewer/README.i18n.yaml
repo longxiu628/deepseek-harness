@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plugins/mai-sdd-doc-viewer/README.md
+/mai-sdd-doc-viewer:
+  en: 13d15984feefeea9
+  zh: d34f941f3e978643
+/mai-sdd-doc-viewer/features:
+  en: dd52dc1f0e3c07bf
+  zh: 7e2ff08c4620786d
+/mai-sdd-doc-viewer/constraints:
+  en: 8ffa33e8c74d216f
+  zh: 6878d9975c8bfa2d
+/mai-sdd-doc-viewer/files:
+  en: e3bd4e16947c577a
+  zh: d3d150b10b8fbebe
+/mai-sdd-doc-viewer/checks:
+  en: a2c8526f8d273262
+  zh: 832c36f78c5eeb36

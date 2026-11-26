@@ -44,6 +44,14 @@ pnpm dsh web
 
 `pnpm run build` 会准备仓库产物。`pnpm dsh web` 会直接使用这些已构建产物，不会重新构建。
 
+## 课程作业：mai-sdd-doc-viewer
+
+本 Fork 为 my-ai-infra SDD 课程作业新增 `mai-sdd-doc-viewer` 插件。它是 DSH 右侧边栏页面，只读浏览当前工作区 `mai-specs` 目录下的 SDD Markdown 文档；不调用 LLM、无需 API Key、不写入文件、不启动子进程。
+
+运行 `pnpm dsh web`，将本地包动态加载为插件（其 `cordis.patch.yml` 负责插入组合），在右侧侧边栏打开 SDD 文档页（SDD documents，插件名 `mai-sdd-doc-viewer`）浏览 `mai-specs` 下的文档。浏览器验收用例为 `apps/web/tests/mai-sdd-doc-viewer.e2e.ts`；静态校验命令为 `pnpm run typecheck` 与 `oxlint plugins/mai-sdd-doc-viewer apps/web/tests/mai-sdd-doc-viewer.e2e.ts`。
+
+SDD 过程文档位于 [`mai-specs/999-mai-sdd-doc-viewer/`](mai-specs/999-mai-sdd-doc-viewer/BRIEF.md)，包含 BRIEF、PRD、TECH_DESIGN、TEST_PLAN、设计评审记录与代码评审记录。开发分支：`feat/mai-sdd-plugin`。
+
 ## 社区与支持
 
 - 通过 [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions) 提交反馈或 bug 报告。

@@ -40,6 +40,14 @@ pnpm dsh web
 
 `pnpm run build` prepares the repository artifacts. `pnpm dsh web` uses those built artifacts without rebuilding.
 
+## Course assignment: mai-sdd-doc-viewer
+
+This fork adds the `mai-sdd-doc-viewer` plugin for the my-ai-infra SDD course assignment. It is a DSH right-Sidebar page that browses the SDD Markdown documents under the current workspace's `mai-specs` directory read-only, without an LLM request, an API key, a file write, or a subprocess.
+
+Run `pnpm dsh web`, load the local package as a dynamic plugin (its `cordis.patch.yml` inserts it into the composition), and open the SDD documents page in the right Sidebar to browse `mai-specs`. The browser acceptance case is `apps/web/tests/mai-sdd-doc-viewer.e2e.ts`; static checks are `pnpm run typecheck` and `oxlint plugins/mai-sdd-doc-viewer apps/web/tests/mai-sdd-doc-viewer.e2e.ts`.
+
+The SDD process documents are in [`mai-specs/999-mai-sdd-doc-viewer/`](mai-specs/999-mai-sdd-doc-viewer/BRIEF.md): BRIEF, PRD, technical design, test plan, design review, and code review. Development branch: `feat/mai-sdd-plugin`.
+
 ## Community and support
 
 - Submit feedback or bug reports through [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions).
